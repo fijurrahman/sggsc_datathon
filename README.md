@@ -5,7 +5,12 @@ The below steps has to be followed to run the pipeline
 
 Execute this file src\test\scala\com\WorkflowControllerSpec.scala to run the CustomerRiskRatingsWF
 
-The fial result can be found in the below output directory src\main\resources\output
+The fial result can be found in the below output directory refer the ratings column which has (High,Medium,Low)
+
+High - High Risk Customers
+Medium - Medium Risk Customers
+Low  - No Risk
+
 https://github.com/fijurrahman/sggsc_datathon/tree/master/src/main/resources/output
 
 System Design
