@@ -2,11 +2,10 @@ package com.workflows.components.transformers
 
 import java.io.PrintWriter
 
-
 import com.utils.Utils.trimUtil
 import com.utils.exception.ExceptionHandler.BatchException
 import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions.{when,col,abs}
+import org.apache.spark.sql.functions.{abs, col, lit, when}
 import com.utils.{SparkIOUtil, StringConstantsUtil => strUtil}
 import org.apache.log4j.Logger
 import org.apache.spark.storage.StorageLevel
@@ -123,7 +122,7 @@ class CustomerRiskRatingsTransformer  extends TransformTrait {
           .when( (col("FD_AMT") + col("SB_CURRENT_BALANCE")  + col("RD_BALANCE")) -
             (col("PERSONAL_LOAN_BALANCE") + col("OD_CURRENT_OUTSTANDING")) > col("PERSONAL_LOAN_BALANCE"),"Low")
             .otherwise("Low")
-        )
+        ).withColumn("upd_ts", lit(strUtil.upd_ts))
 
       //crrrating.show()
 

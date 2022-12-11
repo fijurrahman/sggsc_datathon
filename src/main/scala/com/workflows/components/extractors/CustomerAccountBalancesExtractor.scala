@@ -44,7 +44,7 @@ class CustomerAccountBalancesExtractor  extends ExtractorTrait {
           custAccountLoanDetails.col("PERSONAL_LOAN_BALANCE")
         )
 
-      val custRunningAccountStatusDf = trimUtil(customerLoanAndAccountBalancesDf).withColumn("upd_ts", lit(strUtil.upd_ts))
+      val custRunningAccountStatusDf = trimUtil(customerLoanAndAccountBalancesDf)
 
 
       Some(Map(strUtil.CUSTOMER_ACCOUNT_BALANCES_DF -> custRunningAccountStatusDf))

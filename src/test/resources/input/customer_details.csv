@@ -1,0 +1,99 @@
+ID,CODE_GENDER,FLAG_OWN_CAR,FLAG_OWN_REALTY,CNT_CHILDREN,AMT_INCOME_TOTAL,NAME_INCOME_TYPE,NAME_EDUCATION_TYPE,NAME_FAMILY_STATUS,NAME_HOUSING_TYPE,AGE_IN_DAYS,AGE_IN_YEARS,DAYS_EMPLOYED,FLAG_MOBIL,FLAG_WORK_PHONE,FLAG_PHONE,FLAG_EMAIL,OCCUPATION_TYPE,CNT_FAM_MEMBERS,COUNTRY_CODE
+5163082,F,N,N,0,180000,Pensioner,Higher education,Married,House / apartment,-25201,-69,365243,1,0,0,0,,2,7580
+5163083,F,N,N,0,180000,Pensioner,Higher education,Married,House / apartment,-25201,-69,365243,1,0,0,0,,2,7581
+5023272,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-25140,-68.9,365243,1,0,0,0,,1,7582
+5023273,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-25140,-68.9,365243,1,0,0,0,,1,7583
+5023274,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-25140,-68.9,365243,1,0,0,0,,1,7584
+5116225,M,Y,Y,0,238500,Pensioner,Secondary / secondary special,Married,Office apartment,-25152,-68.9,365243,1,0,0,0,,2,7585
+5116226,M,Y,Y,0,238500,Pensioner,Secondary / secondary special,Married,Office apartment,-25152,-68.9,365243,1,0,0,0,,2,7586
+5735620,M,Y,N,0,202500,Pensioner,Secondary / secondary special,Married,House / apartment,-25151,-68.9,365243,1,0,0,0,,2,7587
+6112238,F,N,Y,0,108000,Pensioner,Higher education,Single / not married,House / apartment,-25159,-68.9,365243,1,0,1,0,,1,7588
+5041258,F,N,Y,0,67500,Pensioner,Secondary / secondary special,Widow,House / apartment,-25099,-68.8,365243,1,0,0,0,,1,7589
+5223590,F,N,N,0,99000,Pensioner,Secondary / secondary special,Married,House / apartment,-25100,-68.8,365243,1,0,0,0,,2,7590
+5223591,F,N,N,0,99000,Pensioner,Secondary / secondary special,Married,House / apartment,-25100,-68.8,365243,1,0,0,0,,2,7580
+5223592,F,N,N,0,99000,Pensioner,Secondary / secondary special,Married,House / apartment,-25100,-68.8,365243,1,0,0,0,,2,7581
+5223593,F,N,N,0,99000,Pensioner,Secondary / secondary special,Married,House / apartment,-25100,-68.8,365243,1,0,0,0,,2,7582
+5732220,F,N,N,0,135000,Pensioner,Secondary / secondary special,Single / not married,Co-op apartment,-25121,-68.8,365243,1,0,0,0,,1,7583
+5732221,F,N,N,0,135000,Pensioner,Secondary / secondary special,Single / not married,Co-op apartment,-25121,-68.8,365243,1,0,0,0,,1,7584
+5036962,F,N,Y,0,162000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25088,-68.7,365243,1,0,0,0,,1,7585
+6583817,F,N,Y,0,162000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25088,-68.7,365243,1,0,0,0,,1,7586
+5297647,F,N,N,0,540000,Pensioner,Secondary / secondary special,Married,House / apartment,-25065,-68.7,365243,1,0,0,0,,2,7587
+5377213,F,N,Y,0,270000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25080,-68.7,365243,1,0,1,0,,1,7588
+5377214,F,N,Y,0,270000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25080,-68.7,365243,1,0,1,0,,1,7589
+5377215,F,N,Y,0,270000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25080,-68.7,365243,1,0,1,0,,1,7590
+5377216,F,N,Y,0,270000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25080,-68.7,365243,1,0,1,0,,1,7582
+5377217,F,N,Y,0,270000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25080,-68.7,365243,1,0,1,0,,1,7583
+5424260,M,Y,Y,0,171000,Pensioner,Secondary / secondary special,Married,House / apartment,-25080,-68.7,365243,1,0,0,0,,2,7584
+5424261,M,Y,Y,0,171000,Pensioner,Secondary / secondary special,Married,House / apartment,-25080,-68.7,365243,1,0,0,0,,2,7585
+5439220,F,N,N,0,90000,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25074,-68.7,365243,1,0,0,0,,1,7586
+5439221,F,N,N,0,90000,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25074,-68.7,365243,1,0,0,0,,1,7587
+5439222,F,N,N,0,90000,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25074,-68.7,365243,1,0,0,0,,1,7588
+5439223,F,N,N,0,90000,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25074,-68.7,365243,1,0,0,0,,1,7589
+6560276,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-25093,-68.7,365243,1,0,0,0,,1,7590
+5223137,F,N,N,0,127800,Pensioner,Secondary / secondary special,Married,House / apartment,-25051,-68.6,365243,1,0,0,0,,2,7580
+5400785,F,N,Y,0,67500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25057,-68.6,365243,1,0,1,0,,1,7581
+5735956,F,N,N,0,202500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25031,-68.6,365243,1,0,0,0,,1,7582
+5735958,F,N,N,0,202500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25031,-68.6,365243,1,0,0,0,,1,7583
+5735960,F,N,N,0,202500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25031,-68.6,365243,1,0,0,0,,1,7584
+5735961,F,N,N,0,202500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25031,-68.6,365243,1,0,0,0,,1,7585
+5890368,F,N,Y,0,207000,Pensioner,Higher education,Single / not married,House / apartment,-25047,-68.6,365243,1,0,0,0,,1,7586
+6045628,F,N,Y,0,90000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25045,-68.6,365243,1,0,1,0,,1,7587
+6045629,F,N,Y,0,90000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25045,-68.6,365243,1,0,1,0,,1,7588
+6045630,F,N,Y,0,90000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25045,-68.6,365243,1,0,1,0,,1,7580
+6288954,F,N,Y,0,108900,Pensioner,Higher education,Single / not married,House / apartment,-25048,-68.6,365243,1,0,1,0,,1,7581
+6288957,F,N,Y,0,108900,Pensioner,Higher education,Single / not married,House / apartment,-25048,-68.6,365243,1,0,1,0,,1,7582
+6288958,F,N,Y,0,108900,Pensioner,Higher education,Single / not married,House / apartment,-25048,-68.6,365243,1,0,1,0,,1,7583
+5132725,M,Y,Y,1,315000,Pensioner,Secondary / secondary special,Married,House / apartment,-25010,-68.5,365243,1,0,0,0,,3,7584
+5132726,M,Y,Y,1,315000,Pensioner,Secondary / secondary special,Married,House / apartment,-25010,-68.5,365243,1,0,0,0,,3,7585
+5377211,M,N,Y,0,103500,Pensioner,Secondary / secondary special,Married,House / apartment,-25005,-68.5,365243,1,0,1,0,,2,7586
+5377212,M,N,Y,0,103500,Pensioner,Secondary / secondary special,Married,House / apartment,-25005,-68.5,365243,1,0,1,0,,2,7587
+5408384,M,N,N,0,144000,Pensioner,Incomplete higher,Widow,House / apartment,-24992,-68.5,365243,1,0,0,0,,1,7585
+5439022,F,N,N,0,67500,Pensioner,Secondary / secondary special,Civil marriage,House / apartment,-25004,-68.5,365243,1,0,0,0,,2,7586
+5439023,F,N,N,0,67500,Pensioner,Secondary / secondary special,Civil marriage,House / apartment,-25004,-68.5,365243,1,0,0,0,,2,7587
+5439024,F,N,N,0,67500,Pensioner,Secondary / secondary special,Civil marriage,House / apartment,-25004,-68.5,365243,1,0,0,0,,2,7588
+5668681,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7589
+5668682,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7590
+5668683,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7580
+5668686,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7581
+5668687,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7582
+5668689,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7583
+5668690,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7584
+5668691,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7585
+5668692,F,N,Y,0,103500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-25014,-68.5,365243,1,0,1,0,,1,7586
+5876449,F,N,Y,0,45000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25000,-68.5,365243,1,0,0,0,,1,7587
+5876450,F,N,Y,0,45000,Pensioner,Secondary / secondary special,Widow,House / apartment,-25000,-68.5,365243,1,0,0,0,,1,7588
+6133042,M,N,Y,0,121500,Pensioner,Higher education,Married,House / apartment,-25020,-68.5,365243,1,0,0,0,,2,7580
+6133043,M,N,Y,0,121500,Pensioner,Higher education,Married,House / apartment,-25020,-68.5,365243,1,0,0,0,,2,7581
+6824167,M,N,N,0,180000,Pensioner,Higher education,Married,House / apartment,-24998,-68.5,365243,1,0,0,0,,2,7582
+6824168,M,N,N,0,180000,Pensioner,Higher education,Married,House / apartment,-24998,-68.5,365243,1,0,0,0,,2,7583
+6824169,M,N,N,0,180000,Pensioner,Higher education,Married,House / apartment,-24998,-68.5,365243,1,0,0,0,,2,7584
+5054729,F,N,Y,0,236250,Pensioner,Secondary / secondary special,Widow,House / apartment,-24963,-68.4,365243,1,0,1,0,,1,7585
+5132576,F,N,Y,0,90000,Pensioner,Secondary / secondary special,Separated,House / apartment,-24970,-68.4,365243,1,0,0,0,,1,7585
+5132577,F,N,Y,0,90000,Pensioner,Secondary / secondary special,Separated,House / apartment,-24970,-68.4,365243,1,0,0,0,,1,7586
+5824190,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7587
+5824191,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7588
+5824192,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7589
+5824193,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7590
+5824194,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7580
+5824195,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7581
+5824196,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7582
+6492077,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7583
+6210856,F,N,Y,0,157500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24980,-68.4,365243,1,0,0,0,,1,7584
+6210857,F,N,Y,0,157500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24980,-68.4,365243,1,0,0,0,,1,7585
+6807268,F,N,Y,0,112500,Pensioner,Secondary / secondary special,Civil marriage,House / apartment,-24978,-68.4,365243,1,0,0,0,,2,7586
+7824191,F,N,Y,0,76500,Pensioner,Secondary / secondary special,Widow,House / apartment,-24956,-68.4,365243,1,0,0,0,,1,7587
+5036470,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7588
+5036472,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7580
+5036473,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7581
+5438978,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7582
+5438979,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7583
+5438981,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7584
+5438984,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7585
+5438986,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7582
+5438987,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7583
+5438988,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7584
+5438989,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7585
+5438990,F,N,N,0,126000,Pensioner,Higher education,Single / not married,House / apartment,-24914,-68.3,365243,1,0,0,0,,1,7582
+5092332,F,N,Y,0,58500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-24946,-68.3,365243,1,0,1,0,,1,7583
+5092334,F,N,Y,0,58500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-24946,-68.3,365243,1,0,1,0,,1,7584
+5092335,F,N,Y,0,58500,Pensioner,Secondary / secondary special,Single / not married,House / apartment,-24946,-68.3,365243,1,0,1,0,,1,7585

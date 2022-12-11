@@ -56,14 +56,5 @@ object TestUtils {
     readCSV(file, schema)
   }
 
-  def insertOverwriteTable(df: DataFrame, tableName: String) = {
-    df.createOrReplaceTempView("temp_view")
-    val insertQuery = s"""
-                         |Insert overwrite table $tableName
-                         |select *
-                         |FROM temp_view
-                         |""".stripMargin
 
-    spark.sql(insertQuery)
-  }
 }

@@ -27,8 +27,6 @@ object WorkflowController {
   }
 
   /**
-   * UDP invokes this method instead of main
-   *
    * @param args args
    */
   def runWorkflow(args: Array[String]): Unit = {
@@ -52,7 +50,7 @@ object WorkflowController {
 
   /**
    * Main method to be called if the WORKFLOW is invoked
-   * through Spark-submit and not through UDP
+   * through Spark-submit
    *
    * Program Arguments :
    * runtype=standalone

@@ -26,9 +26,22 @@ object TestSchema {
     StructField(SC.FLAG_PHONE,StringType,true),
     StructField(SC.FLAG_EMAIL,StringType,true),
     StructField(SC.OCCUPATION_TYPE,StringType,true),
-    StructField(SC.CNT_FAM_MEMBERS,StringType,true)
+    StructField(SC.CNT_FAM_MEMBERS,StringType,true),
+    StructField(SC.COUNTRY_CODE,StringType,true)
   ))
 
+
+  
+  val customerLoanDEtails = StructType(List(
+    StructField(SC.CUST_ID,StringType,true),
+    StructField(SC.FD_AMT,StringType,true),
+    StructField(SC.RD_BALANCE,StringType,true),
+    StructField(SC.SB_CURRENT_BALANCE,StringType,true),
+    StructField(SC.SB_QUARTELY_BALANCE,StringType,true),
+    StructField(SC.OD_CURRENT_OUTSTANDING,StringType,true),
+    StructField(SC.OD_LIMIT,StringType,true),
+    StructField(SC.PERSONAL_LOAN_BALANCE,StringType,true)
+  ))
 
 
 

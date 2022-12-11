@@ -51,7 +51,7 @@ class CustomerDetailsTest extends SharedSparkSession {
     assertSmallDatasetEquality(deptEmptyDf,outDf)
   }
 
-  /*"Transformer" should "match data with sample output" in {
+  "Transformer" should "match data with sample output" in {
     val inputmap: Map[String,Any] = Map("input_feed" -> "src/main/resources/input/customer_details.csv")
 
     val outMap: Option[Map[String, DataFrame]] = new CustomerDetailsExtractor().extract(updatedParamMap ++  inputmap,dataFrameMap)
@@ -61,6 +61,6 @@ class CustomerDetailsTest extends SharedSparkSession {
     assert(expTransDf.count() == outDf.count())
     assertSmallDatasetEquality(expTransDf.sort("CUST_ID"),
       outDf.sort("CUST_ID"))
-  }*/
+  }
 
 }

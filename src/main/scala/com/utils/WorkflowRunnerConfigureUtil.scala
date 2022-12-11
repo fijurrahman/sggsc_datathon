@@ -12,16 +12,8 @@ import scala.io.Source
  */
 object WorkflowRunnerConfigureUtil extends StrictLogging {
 
-  def cleanupFileURI(fileURI: String): String = {
-    // Handle number of slashes after the file string.
-    val regexExpr = "(?<=file:/)(/*)(?=\\w+)"
-    fileURI.replaceAll(regexExpr, "//")
-  }
 
 
-  def cleanupDuplicateSlashes(path: String): String = {
-    path.replaceAll("/+", "/")
-  }
 
   /**
    * Update paramMap without parsing and updating any of the path values.
