@@ -15,17 +15,16 @@ class CustomerDetailsExtractor  extends ExtractorTrait {
 
     try {
       val logger = SparkIOUtil.log
-      logger.info("Country of origin/business (risk countries like Libya, Haiti and Chad)")
+      logger.info("Customer Details Feed extraction Process Started")
 
-      val inputPath: String = paramsMap(strUtil.INPUT_FILE_PATH).toString
+      val inputPath: String = paramsMap(strUtil.CUSTOMERDETAILS_FEED).toString
 
       logger.info(s"Input file path $inputPath")
 
       val customerDf = SparkIOUtil.readCSV(inputPath, true, ",",format = "csv")
-      customerDf.printSchema()
-      customerDf.show(10)
+
       val customerRefinedDf = trimUtil(customerDf)
-      customerDf.printSchema()
+
       Some(Map(strUtil.CUSTOMER_DETAILS_DF -> customerRefinedDf))
 
     }catch {

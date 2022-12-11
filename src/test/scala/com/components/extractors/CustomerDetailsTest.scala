@@ -11,8 +11,8 @@ import com.typesafe.config.{Config, ConfigFactory}
 class CustomerDetailsTest extends SharedSparkSession {
 
   //Prepare data for transformer
-  var rawDf: DataFrame = TU.createDataFrameFromCSVFile(TT.customerDetailsSchema, s"/input/application_record.csv")
-  var expTransDf: DataFrame = TU.createDataFrameFromCSVFile(TT.customerDetailsSchema, s"/input/application_record.csv")
+  var rawDf: DataFrame = TU.createDataFrameFromCSVFile(TT.customerDetailsSchema, s"/input/customer_details.csv")
+  var expTransDf: DataFrame = TU.createDataFrameFromCSVFile(TT.customerDetailsSchema, s"/input/customer_details.csv")
 
   val appConfig: Config = ConfigFactory.parseResources("appConf.conf")
 
@@ -52,7 +52,7 @@ class CustomerDetailsTest extends SharedSparkSession {
   }
 
   /*"Transformer" should "match data with sample output" in {
-    val inputmap: Map[String,Any] = Map("input_feed" -> "src/main/resources/input/application_record.csv")
+    val inputmap: Map[String,Any] = Map("input_feed" -> "src/main/resources/input/customer_details.csv")
 
     val outMap: Option[Map[String, DataFrame]] = new CustomerDetailsExtractor().extract(updatedParamMap ++  inputmap,dataFrameMap)
 

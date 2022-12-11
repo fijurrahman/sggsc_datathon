@@ -18,15 +18,14 @@ class CustomerIndustryExtractor extends ExtractorTrait {
       val logger = SparkIOUtil.log
       logger.info("Industry they belong to (risky industries such as wood-based industries)")
 
-      val inputPath: String = paramsMap(strUtil.INPUT_FILE_PATH).toString  + strUtil.CUSTOMER_INDUSTRY_OF_BUSINESS
+      val inputPath: String = paramsMap(strUtil.CUST_LOB).toString
 
       logger.info(s"Input file path $inputPath")
 
-      val samsQuestionDF = SparkIOUtil.readCSV(inputPath, true, ",",format = "csv")
-        .withColumn("file_date",lit(split(split(input_file_name(),"Sams_Club_US_DailyFeed_AdditionalInformation_").getItem(1),".csv").getItem(0)))
+      val customerIndustryDf = SparkIOUtil.readCSV(inputPath, true, ",",format = "csv")
 
-      val samsQuestionTrimDF = trimUtil(samsQuestionDF)
-      Some(Map(strUtil.CUSTOMER_INDUSTRY_OF_BUSINESS_DF -> samsQuestionTrimDF))
+      val customerIndustryDetails = trimUtil(customerIndustryDf)
+      Some(Map(strUtil.CUSTOMER_INDUSTRY_OF_BUSINESS_DF -> customerIndustryDetails))
 
     }catch {
       case e: Exception => {
@@ -34,7 +33,7 @@ class CustomerIndustryExtractor extends ExtractorTrait {
         e.printStackTrace()
         e.printStackTrace(new PrintWriter(errors))
         throw new BatchException(
-          "error at sams question raw Extractor  " + e.getMessage())
+          "error at customer industry feed extraction Process  " + e.getMessage())
       }
     }
   }

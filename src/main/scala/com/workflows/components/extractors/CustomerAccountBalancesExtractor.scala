@@ -15,19 +15,26 @@ class CustomerAccountBalancesExtractor  extends ExtractorTrait {
 
     try {
       val logger = SparkIOUtil.log
-      logger.info("negative or low average balance")
+      logger.info("Customer Account Balances and Loan Details and Default Customer Extractor")
+
+      val inputPathForLoanDetails: String = paramsMap(strUtil.CUST_ACCOUNT_BALANCES_LOD_FEED).toString
+      val inputPathForLOD: String = paramsMap(strUtil.INPUT_LOAN_DETAILS).toString
+
+      logger.info(s"Input file path $inputPathForLoanDetails and $inputPathForLOD")
+
+      val custAccountLoanDetails = SparkIOUtil.readCSV(inputPathForLoanDetails, true, ",",format = "csv")
+
+      val custAccountLoanLOD = SparkIOUtil.readCSV(inputPathForLOD, true, ",",format = "csv")
+
+      val customerLoanAndAccountBalancesDf = custAccountLoanDetails.alias("customerBalances").join(custAccountLoanLOD
+        , custAccountLoanDetails.col("id") === custAccountLoanLOD.col("id"),"leftouter").select("customerBalances.*")
 
 
+      val custRunningAccountStatusDf = trimUtil(customerLoanAndAccountBalancesDf).withColumn("upd_ts", lit(strUtil.upd_ts))
 
-      val inputPath: String = paramsMap(strUtil.INPUT_FILE_PATH).toString  + strUtil.CUSTOMER_ACCOUNT_BALANCES
+      custRunningAccountStatusDf.show(10)
 
-      logger.info(s"Input file path $inputPath")
-
-      val samsQuestionDF = SparkIOUtil.readCSV(inputPath, true, ",",format = "csv")
-        .withColumn("file_date",lit(split(split(input_file_name(),"Sams_Club_US_DailyFeed_AdditionalInformation_").getItem(1),".csv").getItem(0)))
-
-      val samsQuestionTrimDF = trimUtil(samsQuestionDF)
-      Some(Map(strUtil.CUSTOMER_ACCOUNT_BALANCES_DF -> samsQuestionTrimDF))
+      Some(Map(strUtil.CUSTOMER_ACCOUNT_BALANCES_DF -> custRunningAccountStatusDf))
 
     }catch {
       case e: Exception => {
@@ -35,7 +42,7 @@ class CustomerAccountBalancesExtractor  extends ExtractorTrait {
         e.printStackTrace()
         e.printStackTrace(new PrintWriter(errors))
         throw new BatchException(
-          "Exception in the Customer Account Balance Extractor  " + e.getMessage())
+          "Exception in the Customer Account Balance and Loan Details Extractor  " + e.getMessage())
       }
     }
   }

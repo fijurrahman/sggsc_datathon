@@ -31,25 +31,33 @@ class CustomerRiskRatingsTransformer  extends TransformTrait {
         Country of origin/business (risk countries like Libya, Haiti and Chad)
         */
 
-      val custOverdraftandcreditlimits_df = dataFrameMap.get(strUtil.CUSTOMER_OVERDRAFTS_CREDITLIMITS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
+
       val custAcctbalances_df = dataFrameMap.get(strUtil.CUSTOMER_ACCOUNT_BALANCES_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
-      val custKYC_df =  dataFrameMap.get(strUtil.CUSTOMER_KYC_RATINGS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
-      val custDepositsandLoans_df= dataFrameMap.get(strUtil.CUSTOMER_DEPOSITS_LOANS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
-      val custLoanrepayment_df = dataFrameMap.get(strUtil.CUSTOMER_LOAN_REPAYMENTS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
       val custIndustry_df = dataFrameMap.get(strUtil.CUSTOMER_INDUSTRY_OF_BUSINESS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
       val custDetails_df = dataFrameMap.get(strUtil.CUSTOMER_DETAILS_DF).getOrElse(SparkIOUtil.spark.emptyDataFrame).persist(StorageLevel.MEMORY_AND_DISK)
 
+      log.info("Process Started for the data set custAcctbalances_df,custIndustry_df,custDetails_df")
 
+      val customerRiskRatingsDf = custDetails_df.alias("customerDetails").join(custIndustry_df
+        , custDetails_df.col("COUNTRY_CODE") === custIndustry_df.col("COUNTRY_CODE"),"leftouter").select("customerBalances.*")
 
-      val inputPath: String = paramsMap(strUtil.INPUT_FILE_PATH).toString  + strUtil.CUSTOMER_ACCOUNT_BALANCES
+      log.info("customer Details with LOB")
+      customerRiskRatingsDf.printSchema()
+      customerRiskRatingsDf.show()
 
-      logger.info(s"Input file path $inputPath")
+      val customerRiskRatingsDetailsDf = customerRiskRatingsDf.alias("crrDf").join(custAcctbalances_df
+        ,customerRiskRatingsDf.col("id") === custAcctbalances_df.col("id") ).select("crrDf.*")
 
-      val samsQuestionDF = SparkIOUtil.readCSV(inputPath, true, ",",format = "csv")
-        .withColumn("file_date",lit(split(split(input_file_name(),"Sams_Club_US_DailyFeed_AdditionalInformation_").getItem(1),".csv").getItem(0)))
+      log.info("Customer RiskRatings Df")
 
-      val samsQuestionTrimDF = trimUtil(samsQuestionDF)
-      Map(strUtil.CUSTOMER_RATING_TRANSFORMER_DF -> samsQuestionTrimDF)
+      customerRiskRatingsDetailsDf.printSchema()
+      customerRiskRatingsDetailsDf.show()
+
+      val customerRiskRatingsrptDf = trimUtil(customerRiskRatingsDetailsDf)
+
+      customerRiskRatingsrptDf.show()
+
+      Map(strUtil.CUSTOMER_RATING_TRANSFORMER_DF -> customerRiskRatingsrptDf)
 
     }catch {
       case e: Exception => {
@@ -57,7 +65,7 @@ class CustomerRiskRatingsTransformer  extends TransformTrait {
         e.printStackTrace()
         e.printStackTrace(new PrintWriter(errors))
         throw new BatchException(
-          "Exception in the Customer Account Balance Extractor  " + e.getMessage())
+          "Exception in the Customer Risk Ratings Transformer  " + e.getMessage())
       }
     }
   }
