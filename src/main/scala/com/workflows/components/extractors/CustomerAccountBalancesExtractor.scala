@@ -26,13 +26,26 @@ class CustomerAccountBalancesExtractor  extends ExtractorTrait {
 
       val custAccountLoanLOD = SparkIOUtil.readCSV(inputPathForLOD, true, ",",format = "csv")
 
-      val customerLoanAndAccountBalancesDf = custAccountLoanDetails.alias("customerBalances").join(custAccountLoanLOD
-        , custAccountLoanDetails.col("id") === custAccountLoanLOD.col("id"),"leftouter").select("customerBalances.*")
-
+      val customerLoanAndAccountBalancesDf = custAccountLoanDetails.join(custAccountLoanLOD
+        , custAccountLoanDetails.col("id") === custAccountLoanLOD.col("id"),"leftouter")
+        .select(custAccountLoanLOD.col("ID"),
+          custAccountLoanLOD.col("IS_SB_ACCOUNT"),
+          custAccountLoanLOD.col("IS_OD_ACCOUNT"),
+          custAccountLoanLOD.col("IS_RD_ACCOUNT"),
+          custAccountLoanLOD.col("FLAG_NEGATIVE_BALANCE"),
+          custAccountLoanLOD.col("FLAG_PERSONAL_LOAN"),
+          custAccountLoanLOD.col("FLAG_LOAN_DEFAULT"),
+          custAccountLoanDetails.col("FD_AMT"),
+          custAccountLoanDetails.col("RD_BALANCE"),
+          custAccountLoanDetails.col("SB_CURRENT_BALANCE"),
+          custAccountLoanDetails.col("SB_QUARTELY_BALANCE"),
+          custAccountLoanDetails.col("OD_CURRENT_OUTSTANDING"),
+          custAccountLoanDetails.col("OD_LIMIT"),
+          custAccountLoanDetails.col("PERSONAL_LOAN_BALANCE")
+        )
 
       val custRunningAccountStatusDf = trimUtil(customerLoanAndAccountBalancesDf).withColumn("upd_ts", lit(strUtil.upd_ts))
 
-      custRunningAccountStatusDf.show(10)
 
       Some(Map(strUtil.CUSTOMER_ACCOUNT_BALANCES_DF -> custRunningAccountStatusDf))
 

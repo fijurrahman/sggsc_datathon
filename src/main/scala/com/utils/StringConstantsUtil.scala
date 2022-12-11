@@ -67,6 +67,9 @@ object StringConstantsUtil {
 
   val upd_ts = dateformat.format(Calendar.getInstance().getTime())
 
+  val riskCountry = List("LIBYA","HAITI","CHAD")
+  val moreAge = 60
+
 
 
 }
