@@ -4,7 +4,10 @@ Test data has been placed in the input directory and the below test cases has be
 The below steps has to be followed to run the pipeline
 
 Execute this file src\test\scala\com\WorkflowControllerSpec.scala to run the CustomerRiskRatingsWF
-The fial result can be found in the below output directory src\main\resources\output
-System Design
 
+The fial result can be found in the below output directory src\main\resources\output
+https://github.com/fijurrahman/sggsc_datathon/tree/master/src/main/resources/output
+
+System Design
 https://github.com/fijurrahman/sggsc_assignment/tree/master/src/main/resources/datamodel
+
