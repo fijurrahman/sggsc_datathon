@@ -16,6 +16,7 @@ object StringConstantsUtil {
   val LOCAL = "local"
   val RUNMODE = "runMode"
 
+  val OUTPUT_PATH = "result_folder"
 
   val CUSTOMERDETAILS_FEED = "input_feed_customer"
   val INPUT_LOAN_DETAILS = "loan_details"
@@ -23,12 +24,8 @@ object StringConstantsUtil {
   val CUST_LOB ="customer_lob"
 
   val CUSTOMER_OVERDRAFTS_CREDITLIMITS = ""
-  val CUSTOMER_ACCOUNT_BALANCES=""
-  val CUSTOMER_DEPOSITS_LOANS =""
   val CUSTOMER_DETAILS= "src/main/resources/input/customer_details.csv"
-  val CUSTOMER_KYC_RATINGS=""
-  val CUSTOMER_LOAN_REPAYMENTS=""
-  val CUSTOMER_INDUSTRY_OF_BUSINESS=""
+
 
 
   // OutDF one stage to another stage

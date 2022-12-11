@@ -86,63 +86,6 @@ class BaseSparkIOUtil {
     spark.sql(sql).collect()
   }
 
-  /*def writeOrc(df: DataFrame, mode: SaveMode, tableName: String, partition: Option[String]): Unit = {
-    partition match {
-      case Some(x) => df.write.mode(mode).format("orc").partitionBy(x).saveAsTable(tableName)
-
-      case None => df.write.mode(mode).format("orc").saveAsTable(tableName)
-    }
-  }
-
-  def insertOrc(df: DataFrame, mode: SaveMode, tableName: String, partition: Option[String]): Unit = {
-    partition match {
-      case Some(x) => df.write.mode(mode).format("orc").partitionBy(x).insertInto(tableName)
-
-      case None => df.write.mode(mode).format("orc").insertInto(tableName)
-    }
-  }
-
-  def writeOrc(df: DataFrame, mode: SaveMode, tableName: String, partition: List[String]): Unit = {
-    df.write.mode(mode).format("orc").partitionBy(partition: _*).saveAsTable(tableName)
-  }
-
-  def insertOrc(df: DataFrame, mode: SaveMode, tableName: String, partition: List[String]): Unit = {
-    df.write.mode(mode).format("orc").partitionBy(partition: _*).insertInto(tableName)
-  }*/
-
-  def fetch(sql: String): DataFrame = {
-    log.debug("Executing SQL = " + sql)
-    spark.sql(sql)
-  }
-
-  def fetch(sourceConfig: String, sql: String): DataFrame = {
-    log.debug("Executing SQL = " + sql)
-
-    val sourceProperties = ConfigUtil.getSourceProperties(sourceConfig);
-
-    spark.read.jdbc(url = sourceProperties.get("url").toString, table = sql, sourceProperties)
-  }
-
-  def isTableExists(database: String, tableName: String): Boolean = {
-    spark.catalog.tableExists(database + "." + tableName)
-  }
-
-  def refreshMetaData(schema: String, table: String): Unit = {
-    spark.catalog.refreshTable(schema + "." + table)
-  }
-
-
-  def buildTempDF(): DataFrame = {
-    val rdd = spark.sparkContext.parallelize(List(1, 2, 3))
-    import SparkImplicits._
-    rdd.toDF()
-  }
-
-  def stopContext(): Unit = {
-    if (!spark.sparkContext.isStopped)
-      spark.stop
-  }
-
 }
 
 object BaseSparkIOUtil {

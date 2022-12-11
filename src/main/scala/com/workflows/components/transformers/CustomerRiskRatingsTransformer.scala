@@ -2,7 +2,7 @@ package com.workflows.components.transformers
 
 import java.io.PrintWriter
 
-import com.utils.SparkIOUtil
+
 import com.utils.Utils.trimUtil
 import com.utils.exception.ExceptionHandler.BatchException
 import org.apache.spark.sql.DataFrame
@@ -125,7 +125,7 @@ class CustomerRiskRatingsTransformer  extends TransformTrait {
             .otherwise("Low")
         )
 
-      crrrating.show()
+      //crrrating.show()
 
       val customerRiskRatingsrptDf = trimUtil(crrrating)
 
